@@ -1,7 +1,7 @@
-export function onRequest(context) {
+export async function onRequest(context) {
   const { id } = context.params;
 
-  const data = context.env.FILES_KV.get(id);
+  const data = await context.env.FILES_KV.get(id);
 
   return new Response(
     JSON.stringify({
