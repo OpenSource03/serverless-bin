@@ -14,7 +14,7 @@ export async function onRequestPost(context) {
     JSON.stringify({
       success: true,
       data: body,
-      uuid,
+      key: uuid,
     })
   );
 }
