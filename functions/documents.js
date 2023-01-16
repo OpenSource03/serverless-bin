@@ -8,7 +8,7 @@ export async function onRequestPost(context) {
 
   console.log(body);
 
-  await context.env.FILES_KVA.put(uuid, body);
+  await context.env.FILES_KV.put(uuid, body);
 
   return new Response(
     JSON.stringify({
